@@ -37,8 +37,8 @@ module.exports = {
      * @param {String} buttonLabel          Label of the close button (default: OK)
      */
     alert: function(message, completeCallback, title, buttonLabel) {
-        var _title = (typeof title === "string" ? title : "Alert");
-        var _buttonLabel = (buttonLabel || "OK");
+        var _title = (typeof title === "string" ? title : "");
+        var _buttonLabel = (buttonLabel || "确认");
         exec(completeCallback, null, "Notification", "alert", [message, _title, _buttonLabel]);
     },
 
